@@ -1,0 +1,25 @@
+{
+  "name": "to-do-app",
+  "version": "1.0.0",
+  "description": "listing all todo works",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanduyadav1515/TO-DO-APP.git"
+  },
+  "keywords": [
+    "to-do"
+  ],
+  "author": "Chandu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chanduyadav1515/TO-DO-APP/issues"
+  },
+  "homepage": "https://github.com/chanduyadav1515/TO-DO-APP#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
