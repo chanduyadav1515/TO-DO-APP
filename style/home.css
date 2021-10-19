@@ -1,0 +1,101 @@
+body{
+    background-color: #86a394;
+}
+#main{
+    width: 50%;
+    background-color: azure;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 25%;
+}
+/* heading name of the app */
+.todoHeading{
+    font-size: 2.5rem;
+    background-color: maroon;
+    height: 7%;
+    width: 30%;
+    margin-left: 31%;
+    color: wheat;
+    margin-top: 4px;
+    text-align: center;
+    margin-bottom: 3%;
+}
+/* styling for description box */
+#desc{
+    margin-left: 5%;
+    border: none;
+    border-style: none;
+    outline: none;
+}
+textarea{
+    font-size: 1rem;
+    color: maroon;
+    font-family: sans-serif;
+}
+/* styling for category and due date box */
+.catDateDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+#categoryDiv {
+    margin-left: 5%;
+    margin-top: 2%;
+    width: 60%;
+    height: 40%;
+    font-size: 1.4rem;
+    
+}
+/* styling for drop down list */
+#category{
+    font-size: 1.4rem;
+    width: 90%;
+    height: 60%;
+    font-family: sans-serif;
+    color: #b0b0b0;
+    outline: none;
+    border: none;
+}
+option{
+    color: #696969;
+}
+/* styling for date  */
+#dateDiv {
+    font-size: 1.3rem;
+    width: 55%;
+    height: 50%;
+    margin-top: 2%;
+    border: none;
+    
+}
+#dateDiv input{
+    font-size: 1.2rem;
+    width: 50%;
+    height: 40%;
+    font-family: sans-serif;
+    outline: none;
+    border: none;
+    color: #b0b0b0;
+}
+/* styling for all the labels of boxes */
+.entryHeading{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: maroon;
+}
+/* styling for buttons */
+    #taskButtons{
+        text-align: center;
+        margin-top: 4%;
+    }
+    .common{
+        width: 20%;
+        height: 25%;
+        background-color:tomato;
+        font-size: 1.2rem;
+    }
+    .delete{
+        margin-left: 3%;
+        width: 25%;
+    }

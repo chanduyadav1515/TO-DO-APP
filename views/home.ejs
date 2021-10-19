@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title> 
+            TO-DO APP
+        </title>
+        <link rel="stylesheet" href="home.css">
+        <script src="https://kit.fontawesome.com/2770690ce5.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="main">
+            <div class="todoHeading">TODO APP</div>
+            <div class="formDiv">
+                <form action="/details" method="post">
+                    <div id="descDic">
+                        <label for="desc" class="entryHeading" style="margin-left: 5%;">DESCRIPTION</label><br>
+                        <textarea name="description" id="desc" cols="73%" rows="3%" placeholder="what do you need to do?"></textarea>
+                    </div>
+                    <div class="catDateDiv">
+                        <div id="categoryDiv">
+                            <label for="category" class="entryHeading">CATEGORY</label><br>
+                            <select name="category" id="category" >
+                                <option value="">Choose a category</option>
+                                <option value="Personal">Personal</option>
+                                <option value="Work">Work</option>
+                                <option value="Office">Office</option>
+                                <option value="School">School</option>
+                                <option value="Daily">Daily</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div id="dateDiv">
+                            <label for="duedate" class="entryHeading">DUE DATE</label><br>
+                        <input type="date" name="duedate" id="duedate">
+                        </div>
+                    </div>
+                    <div id="taskButtons">
+                        <button class="common"><i class="fas fa-plus">&nbsp;</i>ADD TASK</button>
+                        <!-- <button class="common delete"><i class="fas fa-trash-alt">&nbsp;</i>DELETE TASK</button> -->
+                    </div>
+                </form>
+            </div>
+            <div></div>
+        </div>
+    </body>
+</html>
