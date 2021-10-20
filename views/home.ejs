@@ -9,6 +9,7 @@
     <body>
         <div id="main">
             <div class="todoHeading">TODO APP</div>
+            <!-- form for taking input of description , category, duedate and creating a add button-->
             <div class="formDiv">
                 <form action="/details" method="POST">
                     <div id="descDic"> 
@@ -30,25 +31,39 @@
                         </div>
                         <div id="dateDiv">
                             <label for="duedate" class="entryHeading">DUE DATE</label><br>
-                        <input type="date" name="duedate" id="duedate">
+                            <input type="date" name="duedate" id="duedate" value="NO DEADLINE">
                         </div>
                     </div>
-                    <div id="taskButtons">
-                        <button class="common"><i class="fas fa-plus">&nbsp;</i>ADD TASK</button>
-                        <!-- <button class="common delete"><i class="fas fa-trash-alt">&nbsp;</i>DELETE TASK</button> -->
-                    </div>
+
+                        <button id="adding" class="common-buttons"><i class="fas fa-plus">&nbsp;</i>ADD TASK</button>
+                        
                 </form>
             </div>
-            <div>
-                <ul>
-                    <%for(let i of details){%>
-                        <input type="checkbox" name="check" value="i" id="checkBox">
-                        <label for="checkBox"><%=i.description%> <%=i.category%> <%=i.duedate%></label><br>
-                         
-                    <%}%>
-                </ul>
-                
-            </div>
+                <!-- form for delete button and for printing the value -->
+                <form action="/delete-contact" method="get">
+                    <button id="deleteButton" class="common-buttons" type="submit"><i class="fas fa-trash-alt">&nbsp;</i>DELETE TASKS</button>
+                    <ul class="list">
+                        <%for(let i of details){%>
+                            <li class="singleList">
+                                <div class="listInside">
+                                    <div class="listInside1">
+                                        <div style="display: flex; ">
+                                            <input type="checkbox" name="<%=i._id%>" value=<%=i._id%> id="checkBox">
+                                            <label for="checkBox"><%=i.description%></label><br>
+                                        </div>
+                                        <div style="margin-left: 5%; font-size: 0.8rem; margin-top: 1%;">
+                                            <i class="fas fa-calendar-week"></i>
+                                            <%= i.duedate%>
+                                        </div>
+                                    </div>
+                                    <div class="listInside2">
+                                        <span><%= i.category%></span>
+                                    </div>
+                                </div>
+                            </li>
+                        <%}%>
+                    </ul>
+                </form>
         </div>
     </body>
 </html>

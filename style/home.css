@@ -1,25 +1,26 @@
 body{
-    background-color: #86a394;
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
 }
+/* styling center box  */
 #main{
     width: 50%;
-    background-color: azure;
-    height: 100%;
+    background-color: white;
     display: flex;
     flex-direction: column;
     margin-left: 25%;
+    min-height: 100%;
 }
-/* heading name of the app */
+/* heading name*/
 .todoHeading{
     font-size: 2.5rem;
-    background-color: maroon;
     height: 7%;
     width: 30%;
     margin-left: 31%;
-    color: wheat;
+    color:#616060;
     margin-top: 4px;
     text-align: center;
     margin-bottom: 3%;
+    font-weight: bold;
 }
 /* styling for description box */
 #desc{
@@ -30,7 +31,6 @@ body{
 }
 textarea{
     font-size: 1rem;
-    color: maroon;
     font-family: sans-serif;
 }
 /* styling for category and due date box */
@@ -85,17 +85,59 @@ option{
     color: maroon;
 }
 /* styling for buttons */
-    #taskButtons{
-        text-align: center;
-        margin-top: 4%;
-    }
-    .common{
+    
+    #adding{
         width: 20%;
-        height: 25%;
-        background-color:tomato;
+        height: 50px;
+        background: linear-gradient(to right, #99ccff 0%, #3366ff 103%);
         font-size: 1.2rem;
+        margin-left: 28%;
+        margin-top: 7%;
     }
-    .delete{
-        margin-left: 3%;
+    #deleteButton{
+        margin-top: -8.7%;
+        margin-left: 50%;
         width: 25%;
+        height: 50px;
+        background: linear-gradient(to right, #99ccff 0%, #3366ff 103%);
+        font-size: 1.2rem;
+        
+    }
+    .common-buttons{
+        border: 1px solid ;
+        color:#616060;
+        font-weight: bold;
+    }
+
+    /*styling for output list */
+     
+    .list{
+        margin-left: 2%;
+        margin-top: 7.5%;
+        width: 80%;
+        list-style: none;
+    }
+    .singleList{
+        margin-top: 2%;
+        border-bottom: 2px solid #574e4d;
+        height: 50px;
+        font-size: 1.3rem;
+        color: #574e4d;
+        overflow: scroll;
+    }
+    input[type=checkbox]:checked + label {
+          
+        text-decoration: line-through;
+    }
+    .singleList::-webkit-scrollbar {
+        display: none;
+    }
+    .listInside{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    .listInside1{
+        flex: 70%;
     }

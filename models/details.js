@@ -1,5 +1,6 @@
 
 const mongoose = require('mongoose');
+// Schema for accepting description, category and duedate
 const detailsSchema = new mongoose.Schema({
     description:{
         type: String,
@@ -7,11 +8,9 @@ const detailsSchema = new mongoose.Schema({
     },
     category:{
         type: String,
-        required: true
     },
     duedate:{
-        type: Date,
-        required: true
+        type: String,
     }
 });
 const detail = mongoose.model('detail' , detailsSchema);
