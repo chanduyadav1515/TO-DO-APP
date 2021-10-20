@@ -3,14 +3,14 @@ const port  = 1234;
 const bodyParser = require("body-parser");
 
 const app = express();
-
+app.use(bodyParser.urlencoded({extended: true}));
 const db = require("./config/mongoose")
 const detail = require("./models/details")
 app.set('view engine' , 'ejs');
 app.set('views' , './views')
 app.use('/' , require("./routes/index"))
 app.use(express.static('style'));
-app.use(bodyParser.urlencoded({extended: true}));
+
 
 
 app.listen(port , function(err)

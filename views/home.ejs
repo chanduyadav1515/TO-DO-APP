@@ -10,15 +10,15 @@
         <div id="main">
             <div class="todoHeading">TODO APP</div>
             <div class="formDiv">
-                <form action="/details" method="post">
-                    <div id="descDic">
+                <form action="/details" method="POST">
+                    <div id="descDic"> 
                         <label for="desc" class="entryHeading" style="margin-left: 5%;">DESCRIPTION</label><br>
-                        <textarea name="description" id="desc" cols="73%" rows="3%" placeholder="what do you need to do?"></textarea>
+                        <textarea type = "text" name="description" id="desc" cols="73%" rows="3%" placeholder="what do you need to do?"></textarea>
                     </div>
                     <div class="catDateDiv">
                         <div id="categoryDiv">
-                            <label for="category" class="entryHeading">CATEGORY</label><br>
-                            <select name="category" id="category" >
+                             <label for="category" class="entryHeading">CATEGORY</label><br>
+                            <select  type = "text" name="category" id="category" >
                                 <option value="">Choose a category</option>
                                 <option value="Personal">Personal</option>
                                 <option value="Work">Work</option>
@@ -39,7 +39,16 @@
                     </div>
                 </form>
             </div>
-            <div></div>
+            <div>
+                <ul>
+                    <%for(let i of details){%>
+                        <input type="checkbox" name="check" value="i" id="checkBox">
+                        <label for="checkBox"><%=i.description%> <%=i.category%> <%=i.duedate%></label><br>
+                         
+                    <%}%>
+                </ul>
+                
+            </div>
         </div>
     </body>
 </html>
